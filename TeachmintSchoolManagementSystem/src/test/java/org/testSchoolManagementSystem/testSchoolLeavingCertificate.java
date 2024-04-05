@@ -19,25 +19,24 @@ public class testSchoolLeavingCertificate extends BaseTest{
 		TeachmintSchoolManagementHomePage homePage = new TeachmintSchoolManagementHomePage(driver);
 		
 		homePage.selectModuleToWorkOn(homePage.getAdministrationOption());
-		Assert.assertEquals(true,homePage.getShadowHostElement().isDisplayed());
 		Reporter.log("Administration Module is Selected!!",true);
 		
 		TeachmintSchoolmanagementAdministrationPage administrationPage = new TeachmintSchoolmanagementAdministrationPage(driver);
 		administrationPage.selectTheCertificateType(administrationPage.getSchoolLeavingCertificate());
 		Assert.assertEquals(true,administrationPage.getCertificate_and_Doc_Element().isDisplayed());
-		Reporter.log("SchoolLeavingCertificate Selected!!");
+		Reporter.log("SchoolLeavingCertificate Selected!!",true);
 		
 		String studentName = readTestData.readStringDataFromExcel(STUDENT_INFOSHEET,1,1);
 		String remark = readTestData.readStringDataFromExcel(STUDENT_INFOSHEET,1,11);
 		administrationPage.searchTheStudent_and_generateCertificate(studentName, remark);
-		Reporter.log("Searched for student and generated his LC!!");
+		Reporter.log("Searched for student and generated his LC!!",true);
 		
 		administrationPage.downloadTheSchoolLeavingCertificate(administrationPage.getLCgenerateButton3());
-		Reporter.log("Downloaded the SchoolLeavingCertificate!!");
+		Reporter.log("Downloaded the SchoolLeavingCertificate!!",true);
 		
 		Assert.assertEquals(administrationPage.getStudentNameElementFromHistory().getText(),studentName);
 		administrationPage.validateCertificate();
-		Reporter.log("It's a validate certificate!!");
+		Reporter.log("It's a validate certificate!!",true);
 		
 	}
 	

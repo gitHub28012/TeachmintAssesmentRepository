@@ -76,13 +76,13 @@ public abstract class BaseTest extends InitObjects{
 	}
 	
 	
-//	@AfterClass(alwaysRun = true)
-//	public void browserTearDown()
-//	{
-//		driver.quit();
-//	}
-//	
-//	
+	@AfterClass(alwaysRun = true)
+	public void browserTearDown()
+	{
+		driver.quit();
+	}
+	
+	
 
 	//********************Custom Exception************
 	

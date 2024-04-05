@@ -52,6 +52,8 @@ public class TeachmintSchoolmanagementAdministrationPage extends BasePage {
 	private WebElement PreviewToVerify;
 	@FindBy(xpath = "(//p[contains(@class,'krayon__Para-module__VmUAA krayon__Para-module__Qddrw krayon__Para-module__5')])[1]")
 	private WebElement studentNameElementFromHistory;
+	@FindBy(xpath = "(//span[@data-qa='icon-close'])[2]")
+	private WebElement closePreview;
 	
 	
 	
@@ -118,10 +120,14 @@ public class TeachmintSchoolmanagementAdministrationPage extends BasePage {
 	}
 
 	
+	public WebElement getClosePreview() {
+		return closePreview;
+	}
+
 	
 	// operational Methods of WebElement
 
-	
+
 	public void selectTheCertificateType(WebElement certificateType) {
 		InitObjects initObj = new InitObjects();
 		initObj.getActionsUtil(driver).mouseHoverOnElement(certificatesLink);
@@ -192,7 +198,12 @@ public class TeachmintSchoolmanagementAdministrationPage extends BasePage {
 		initObj.getActionsUtil(driver).mouseHoverOnElement(icon);
 		icon.click();
 		PreviewToVerify.click();
-
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        closePreview.click();
 	}
 
 }
