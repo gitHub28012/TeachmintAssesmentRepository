@@ -6,8 +6,6 @@ import org.schoolmanagementautomation.generic_utilities.InitObjects;
 
 public abstract class BasePage extends InitObjects{
 	
-	
-
 	public BasePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}

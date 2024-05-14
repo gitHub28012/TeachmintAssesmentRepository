@@ -5,6 +5,7 @@
     <classes>
       <class name="org.testSchoolManagementSystem.testSchoolLeavingCertificate">
         <methods>
+          <include name="browserTearDown"/>
           <include name="browserSetup"/>
           <include name="testSchoolLCMethod"/>
           <include name="logoutFromSchoolManagementSystem"/>

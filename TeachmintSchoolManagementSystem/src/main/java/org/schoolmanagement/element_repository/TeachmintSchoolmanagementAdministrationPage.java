@@ -23,7 +23,6 @@ public class TeachmintSchoolmanagementAdministrationPage extends BasePage {
 
 	@FindBy(partialLinkText = "Certificates")
 	private WebElement certificatesLink;
-
 	@FindBy(xpath = "//h6[text()='School leaving certificate']/ancestor::div[@data-qa='plain-card']")
 	private WebElement schoolLeavingCertificate;
 	@FindBy(xpath = "//h2[text()='Certificates and Documents']")

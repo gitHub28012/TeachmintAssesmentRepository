@@ -9,7 +9,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 @Listeners(CustomeListener.class)
-public class testSchoolLeavingCertificate extends BaseTest{
+public class testSchoolLeavingCertificateTest extends BaseTest{
 	
 	
 	@Test(alwaysRun = true)

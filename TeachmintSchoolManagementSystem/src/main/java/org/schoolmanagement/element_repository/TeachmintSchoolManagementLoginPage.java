@@ -28,7 +28,7 @@ public class TeachmintSchoolManagementLoginPage extends BasePage {
 	private List<WebElement> otpFields;
 	@FindBy(id = "submit-otp-btn-id")
 	private WebElement submitOtpButton;
-	@FindBy(xpath = "//div[@class='profile-cont']")
+	@FindBy(xpath = "(//div[@class='profile-cont'])[2]")
 	private WebElement accountProfile;
 
 	

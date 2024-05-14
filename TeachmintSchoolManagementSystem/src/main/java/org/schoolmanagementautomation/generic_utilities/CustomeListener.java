@@ -21,6 +21,8 @@ public class CustomeListener extends BaseTest implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {	
+		InitObjects initObj = new InitObjects();
+		initObj.getUtilityMethods().captureScreen(driver, result);
 				
 	}		
 
