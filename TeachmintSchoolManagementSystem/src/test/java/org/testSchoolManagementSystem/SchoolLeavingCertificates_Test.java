@@ -3,15 +3,11 @@ package org.testSchoolManagementSystem;
 import org.schoolmanagement.element_repository.TeachmintSchoolManagementHomePage;
 import org.schoolmanagement.element_repository.TeachmintSchoolmanagementAdministrationPage;
 import org.schoolmanagementautomation.base.BaseTest;
-import org.schoolmanagementautomation.generic_utilities.CustomeListener;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-@Listeners(CustomeListener.class)
-public class SchoolLeavingCertificate_Test extends BaseTest{
-	
-	
+
+public class SchoolLeavingCertificates_Test extends BaseTest {
 	@Test(alwaysRun = true)
 	public void testSchoolLCMethod()
 	{
